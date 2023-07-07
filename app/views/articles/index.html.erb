@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Articles</h1>
+
+<div id="articles">
+  <% @articles.each do |article| %>
+    <%= render article %>
+    <p>
+      <%= link_to "Show this article", article %> |
+      <%= link_to "Edit this article", edit_article_path(article) %> 
+      <%= button_to "Destroy this article", article, method: :delete %>
+    </p>
+      
+    
+  <% end %>
+</div>
+
+<%= link_to "New article", new_article_path %> |
+<%= link_to "Homepage", root_path %>
